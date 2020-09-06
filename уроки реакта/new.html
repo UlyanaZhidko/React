@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Cat</title>
+    <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+
+        class Game extends React.Component {
+            render() {
+
+                return (
+                    <div>
+                        <h1>{this.props.name}</h1>
+                        <h2>{this.props.age}</h2>
+                    </div>
+                );
+            }
+        };
+
+
+
+
+        const app = document.getElementById("root");
+
+        ReactDOM.render(
+
+            <div>
+                <Game name="Forza" age="18+" />
+                <Game name="Mortal" age="17+" />
+                <Game name="GTA" age="16+" />
+                <Game name="LAN" age="5+" />
+
+            </div>,
+
+
+            app
+        );
+    </script>
+</body>
+
+</html>
